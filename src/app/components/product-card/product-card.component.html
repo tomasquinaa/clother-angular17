@@ -1,14 +1,19 @@
 <mat-card class="shadow">
     <img mat-card-image
         class="!h-72"
-        src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/b/f/q/l-01a-arsenalredplani2023-yutu-original-imagx48bv5fhgrzz.jpeg?q=70">
+        [src]="product.image">
+
     <div class="p-4">
-        <h1>Product Name/title</h1>
-        <h2>Product brand</h2>
+        <h1>{{product.name}}</h1>
+        <h2>{{product.brand}}</h2>
         <div class="flex gap-2">
-            <span>Kz. 1000</span>
-            <span><s>Kz. 2000</s></span>
-            <span>(50%) OFF</span>
+            <span>Kz. {{product.currentPrice}}</span>
+            <span><s>Kz. {{product.standardPrice}}</s></span>
+            <span>({{product.discount}}%) OFF</span>
+        </div>
+        <div class="flex justify-center">
+            <button mat-raised-button color="primary"
+                (click)="view()">View</button>
         </div>
     </div>
 </mat-card>

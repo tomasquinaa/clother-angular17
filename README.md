@@ -53,3 +53,9 @@ types = [1, 2, 3, 4];
 ## Criar um component product:
 
 ng g c components/product-card
+
+## Component Comunication
+
+@Input: provide product detail to product card as input
+
+@output: Emit view product event from product card
