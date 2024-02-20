@@ -8,4 +8,6 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   styleUrl: './home.component.css',
   imports: [ProductCardComponent],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  products = [1, 2, 3, 4, 5];
+}
