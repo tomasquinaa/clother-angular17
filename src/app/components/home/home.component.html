@@ -1,4 +1,7 @@
 <div class="p-8 mt-4">
+    <div class="flex mb-4">
+        <app-search (search)="onSearch($event)"></app-search>
+    </div>
     <div class="flex flex-wrap">
         @for (item of products; track $index) {
         <div class="w-4/12 pr-2 mb-2">

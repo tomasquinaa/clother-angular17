@@ -59,3 +59,7 @@ ng g c components/product-card
 @Input: provide product detail to product card as input
 
 @output: Emit view product event from product card
+
+## componente Serach
+
+ng g c components/search
