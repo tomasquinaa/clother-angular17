@@ -20,7 +20,7 @@ export class HomeComponent {
       currentPrice: '150',
       standardPrice: '300',
       discount: '50',
-      name: 'Men Pure Cotton T-Shirt',
+      name: 'Men Checkered T-Shirt',
     },
     {
       id: '2',
@@ -40,15 +40,26 @@ export class HomeComponent {
       currentPrice: '750',
       standardPrice: '600',
       discount: '50',
-      name: 'Men Pure Cotton T-Shirt',
+      name: 'Disney Comfort',
     },
   ];
 
+  filteredProduct: any[] = [];
+  ngOnInit() {
+    this.filteredProduct = this.products;
+  }
   onViewProduct(event: any) {
     console.log('onViewProduct', event);
   }
 
   onSearch(search: string) {
     console.log('home', search);
+    if (search) {
+      this.filteredProduct = this.products.filter((x) =>
+        x.name.toLowerCase().includes(search.toLowerCase())
+      );
+    } else {
+      this.filteredProduct = this.products;
+    }
   }
 }

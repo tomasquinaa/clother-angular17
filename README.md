@@ -63,3 +63,8 @@ ng g c components/product-card
 ## componente Serach
 
 ng g c components/search
+
+## Services
+
+Creating Angular service: create product service; injecting; data sharing
+Http Client
