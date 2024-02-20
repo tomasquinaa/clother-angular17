@@ -39,3 +39,17 @@ ng g c components/home
 @if(*ngIf)
 @else
 @for(*ngFor)
+
+export class HomeComponent {
+types = [1, 2, 3, 4];
+}
+@for (item of types; track $index) {
+
+<h2>hello {{item}}</h2>
+}@empty {
+<h4>Não há elemento no array </h4>
+}
+
+## Criar um component product:
+
+ng g c components/product-card
