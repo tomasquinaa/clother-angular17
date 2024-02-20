@@ -68,3 +68,5 @@ ng g c components/search
 
 Creating Angular service: create product service; injecting; data sharing
 Http Client
+
+ng g s product
