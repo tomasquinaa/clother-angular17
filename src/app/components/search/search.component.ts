@@ -1,11 +1,13 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [MatInputModule, MatButtonModule],
+  imports: [MatInputModule, MatButtonModule, FormsModule, RouterLink],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css',
 })
@@ -17,12 +19,4 @@ export class SearchComponent {
   }
 
   text = '';
-  inputChange(event: any) {
-    console.log('input change called', event.target.value);
-    this.text = event.target.value;
-  }
-
-  onTyping(event: any) {
-    console.log('onTyping called', event.target.value);
-  }
 }

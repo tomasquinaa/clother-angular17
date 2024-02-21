@@ -76,3 +76,11 @@ ng g s product
 npm install json-server
 
 Create a db.json or db.json5 file
+
+## Routing
+
+ng g c components/product-detail
+
+## Forms
+
+ng g c componenents/add-product
