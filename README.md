@@ -70,3 +70,9 @@ Creating Angular service: create product service; injecting; data sharing
 Http Client
 
 ng g s product
+
+## Criação do JSON SERVER
+
+npm install json-server
+
+Create a db.json or db.json5 file
