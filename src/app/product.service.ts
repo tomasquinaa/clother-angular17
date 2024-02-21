@@ -24,4 +24,13 @@ export class ProductService {
       product
     );
   }
+
+  updateProduct(product: Product) {
+    return this.httpClient.put<Product>(
+      'http://localhost:3000/products',
+      product
+    );
+  }
 }
+
+// MINUTO 2:55

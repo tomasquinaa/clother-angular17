@@ -18,6 +18,10 @@
                 <span><s>Kz. {{product.standardPrice}}</s></span>
                 <span>({{product.discount}}%) OFF</span>
             </div>
+            <div class="flex justify-center">
+                <button mat-raised-button color="accent"
+                    [routerLink]="'/edit-product/'+product.id">Edit</button>
+            </div>
 
         </div>
     </mat-card>
