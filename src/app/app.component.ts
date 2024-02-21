@@ -13,6 +13,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     HomeComponent,
     HeaderComponent,
     ProductCardComponent,
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
