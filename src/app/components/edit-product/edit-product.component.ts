@@ -4,6 +4,7 @@ import {
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -24,8 +25,8 @@ export class EditProductComponent {
   activatedRoute = inject(ActivatedRoute);
   router = inject(Router);
   productForm: FormGroup = this.formBuilder.group({
-    id: [''],
-    name: [''],
+    id: ['', [Validators.required, Validators.minLength(50)]],
+    name: ['', [Validators.required]],
     brand: [''],
     image: [''],
     currentPrice: [''],
@@ -39,6 +40,10 @@ export class EditProductComponent {
     });
   }
   editProduct() {
+    if (this.productForm.invalid) {
+      alert('Por favor providenciar todos os campos com valor valido');
+      return;
+    }
     console.log('teste do edit', this.productForm.value);
     this.productService
       .updateProduct(this.productForm.value)

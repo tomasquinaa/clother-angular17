@@ -27,7 +27,7 @@ export class ProductService {
 
   updateProduct(product: Product) {
     return this.httpClient.put<Product>(
-      'http://localhost:3000/products',
+      'http://localhost:3000/products/' + product.id,
       product
     );
   }

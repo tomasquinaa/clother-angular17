@@ -75,6 +75,8 @@ ng g s product
 
 npm install json-server
 
+npm run server - verificar no package.json
+
 Create a db.json or db.json5 file
 
 ## Routing
