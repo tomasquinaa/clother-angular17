@@ -96,3 +96,13 @@ LINK: https://www.npmjs.com/package/ngx-toastr
 copiamos a importação e colamos no styles.css: @import 'ngx-toastr/toastr';
 
 copiamos o provideToastr e colamos no app.config: provideToastr(), // Toastr providers
+
+## PIPES
+
+Pipes são funções que são usadas para transformar dados em modelos. Eu geral, pipes são funções "puras" que não causam efeitos colaterais. O Angular tem uma série de pipes internos úteis que você pode importar e usar em seus componentes. Você também pode criar um pipe personalizado
+
+Para transformar a palavra maiscula e minuscula - Pipe
+
+comando: ng g pipe rupe
+
+foi criado um ficheiro pipe e foi trabalhado no componente produto principal ou listado
