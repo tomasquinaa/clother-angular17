@@ -12,6 +12,8 @@ import { Product } from '../../types/product';
 import { ProductService } from '../../product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-edit-product',
   standalone: true,
@@ -23,11 +25,12 @@ export class EditProductComponent {
   formBuilder = inject(FormBuilder);
   productService = inject(ProductService);
   activatedRoute = inject(ActivatedRoute);
+  toasterService = inject(ToastrService);
   router = inject(Router);
   productForm: FormGroup = this.formBuilder.group({
     id: ['', [Validators.required, Validators.minLength(50)]],
     name: ['', [Validators.required]],
-    brand: [''],
+    brand: ['', [Validators.required]],
     image: [''],
     currentPrice: [''],
     standardPrice: [''],
@@ -41,14 +44,16 @@ export class EditProductComponent {
   }
   editProduct() {
     if (this.productForm.invalid) {
-      alert('Por favor providenciar todos os campos com valor valido');
+      this.toasterService.error(
+        'Por favor providenciar todos os campos com valor valido'
+      );
       return;
     }
     console.log('teste do edit', this.productForm.value);
     this.productService
       .updateProduct(this.productForm.value)
       .subscribe((result) => {
-        alert('producto atualizado');
+        this.toasterService.success('producto atualizado');
         this.router.navigateByUrl('/');
       });
   }

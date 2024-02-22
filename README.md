@@ -86,3 +86,13 @@ ng g c components/product-detail
 ## Forms
 
 ng g c componenents/add-product
+
+## NGX TOASTER
+
+INSTALAÇÃO: npm install ngx-toastr --save
+
+LINK: https://www.npmjs.com/package/ngx-toastr
+
+copiamos a importação e colamos no styles.css: @import 'ngx-toastr/toastr';
+
+copiamos o provideToastr e colamos no app.config: provideToastr(), // Toastr providers
